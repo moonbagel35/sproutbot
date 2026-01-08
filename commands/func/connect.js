@@ -4,6 +4,7 @@ const { defaultStream } = require('../../config.json');
 
 const errorEmbed = require('../../embeds/errorEmbed');
 const successEmbed = require('../../embeds/successEmbed');
+const {getNextResource} = require("../../util/audioHandler");
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -111,7 +112,15 @@ module.exports = {
         // log idle
         player.on(AudioPlayerStatus.Idle, () => {
             console.log('The audio player has become idle.');
-            player.play(getNextResource());
+
+            const nextResource = getNextResource();
+
+            if (nextResource) {
+                player.play(nextResource);
+            } else {
+                console.log('No next resource found. Standing by.');
+                // Optional: connection.destroy() if you want the bot to leave when finished
+            }
         });
 
         player.on(AudioPlayerStatus.Playing, () => {

@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, getVoiceConnection, NoSubscriberBehavior, createAudioResource, AudioPlayerStatus, VoiceConnectionStatus, entersState } = require('@discordjs/voice');
-
+const { getNextResource } = require('../../util/audioHandler'); // Correct relative path// 
 const errorEmbed = require('../../embeds/errorEmbed');
 const successEmbed = require('../../embeds/successEmbed');
 
@@ -82,8 +82,17 @@ module.exports = {
         });
 
         player.on(AudioPlayerStatus.Idle, () => {
-            console.log('The audio player has become idle.');
-            player.play(getNextResource());
+            console.log('The audio player has become idle. Attempting to restart stream...');
+
+            const resource = getNextResource();
+
+            // Check if the resource is valid before calling .play()
+            if (resource) {
+                player.play(resource);
+            } else {
+                console.error('Reconnect failed: getNextResource returned null. Check your stream URL source.');
+                // Optional: Send a message to the Discord channel to alert the user
+            }
         });
 
         player.on(AudioPlayerStatus.Playing, () => {

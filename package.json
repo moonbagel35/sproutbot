@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.10.0",
-    "@discordjs/voice": "^0.16.0",
+    "@discordjs/voice": "^0.19.0",
+    "@snazzah/davey": "^0.1.9",
+    "discord-api-types": "^0.38.37",
     "discord.js": "^14.12.1",
     "ffmpeg-static": "^5.1.0",
     "icecast-metadata-stats": "^0.1.10",

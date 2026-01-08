@@ -15,7 +15,7 @@
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/okdargy/incecast
+git clone https://github.com/moonbagel357/sproutbot
 ```
 
 2. Install dependencies
@@ -28,7 +28,7 @@ npm install
 This step is required for @discordjs/voice to work. You can install ffmpeg from [here](https://ffmpeg.org/download.html). 
 
 > [!IMPORTANT]
-> We recommend you **not** to use ffmpeg-static as it is very unstable is almost guaranteed to crash.
+> We recommend you **not** to use ffmpeg-static as it is very unstable and is almost guaranteed to crash.
 
 4. Rename the `config.example.json` file to `config.json` and fill in the required fields.
 ```json
@@ -53,7 +53,7 @@ node index.js
 
 ## Usage
 ### Commands
-Incecast uses slash commands to interact with the bot. You can find the list of commands below.
+Sproutbot uses slash commands to interact with the bot. You can find the list of commands below.
 | Command | Description |
 | --- | --- |
 | `/play` | Play a radio stream from radio.garden |
@@ -76,6 +76,5 @@ Incecast uses slash commands to interact with the bot. You can find the list of 
 ## Thanks to...
 ### [radio.garden](https://radio.garden)
 Having such an amazing API and the root inspiration for this bot
-
-### The whole RWB team
-I'd like to thank the [Running With Bricks](https://github.com/Running-With-Bricks) group for supporting the creation of this bot and showing interest!
+### okdargy the [Running With Bricks](https://github.com/Running-With-Bricks) group
+For creating the original incecast bot that inspired me to create this one
