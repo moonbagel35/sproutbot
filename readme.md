@@ -10,12 +10,12 @@
 ## Features
 - 📻 Listen to radio streams
 - 🔍 Search for radios (from [radio.garden API](https://radio.garden))
-- 💬 Project current playing song to bot status
+- 💬 Display currently playing song on bot status.
 
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/moonbagel357/sproutbot
+git clone https://github.com/moonbagel35/sproutbot
 ```
 
 2. Install dependencies
@@ -67,7 +67,7 @@ Sproutbot uses slash commands to interact with the bot. You can find the list of
 
 | ![Displaying bot status](https://i.imgur.com/jeaedk2.png) |
 |:--:| 
-| *Showing what bot stauts looks like* |
+| *Showing what bot status looks like* |
 
 | ![Command usage](https://i.imgur.com/jAsyFh7.png) |
 |:--:| 
@@ -76,5 +76,5 @@ Sproutbot uses slash commands to interact with the bot. You can find the list of
 ## Thanks to...
 ### [radio.garden](https://radio.garden)
 Having such an amazing API and the root inspiration for this bot
-### okdargy the [Running With Bricks](https://github.com/Running-With-Bricks) group
-For creating the original incecast bot that inspired me to create this one
+### okdargy and the [Running With Bricks](https://github.com/Running-With-Bricks) group
+For creating the original incecast bot, the daddy of this project
