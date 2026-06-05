@@ -5,3 +5,5 @@ pnpm-lock.yaml
 station_cache.json
 notes.md
 config.json
+.vs
+.idea
